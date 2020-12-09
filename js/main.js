@@ -42,3 +42,5 @@ console.log('rest: ', age_koder - 5 )
 
 
 
+
+
