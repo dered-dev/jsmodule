@@ -1,11 +1,2 @@
-console.log('Hola Koders')
 
-
-
-
-
-
-
-
-
-
+console.log('ready')
