@@ -1,0 +1,5 @@
+/**
+ * Métodos de string
+ */
+
+
