@@ -1,10 +1,13 @@
 // Imprimir en consola la tabla del 7
 // 7 x 1 = 7
+// 7 x 2 = 14
+// 7 x 3 = 7
 
 console.log('TAREA')
 console.log('Tabla del 7')
 for (let i = 1; i <= 10; i++) {
     console.log(`7 x ${i} = ${ 7 * i}`)
+    // template literal
 }
 
 // imprimir en consola los múltiplos de 3 y 7  que se encuentran entre el 1 y el 100
@@ -28,9 +31,6 @@ for(let i = 0; i < stringSpaces.length; i++){
 }
 console.log(countSpace)
 console.log(stringSpaces.split(" ").length - 1)
-
-
-
 
 // imprimir en consola la cantidad de vocales que se encuentran en una cadena de texto
 // "Hola mundo" -> 4
