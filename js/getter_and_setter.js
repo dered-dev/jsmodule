@@ -34,7 +34,7 @@ let obj = {
         return `${this.age} años`
     }
 }
-console.log(obj.getAverage())
+console.log(obj.getfullname())
 
 let koder = {
     email: 'jorgec@kodemia.mx',
@@ -58,6 +58,28 @@ let koder = {
             ave: 90
         }
     ],
+    asistencias: [
+        {ispresent: false},
+        {ispresent: true},
+        {ispresent: false},
+    ],
+    get porcentajeFaltas() {
+        let asistencias = this.asistencias
+        // let accFaltas = 0
+        // for(falta in asistencias) {
+        //     if(asistencias[falta] === false) {
+        //         accFaltas += 1
+        //     }
+        // }
+        //return accFaltas
+        return asistencias.reduce( (acc, cv) => {
+            if(cv.ispresent === false) {
+               return acc + 1
+            } else {
+                return acc
+            }
+        }, 0)
+    },
     get fullName () {
         return this.name + ' ' + this.lastname
     },
@@ -80,8 +102,10 @@ let koder = {
     },
     set customProperty (nameProperties){
         this[nameProperties.nameProperty] = nameProperties.valuePro
-    }
+    },
+
 }
+console.log(koder.fullName)
 koder.newbootcamp = 'JS'
 koder.customProperty = {
     nameProperty: 'customPr',
