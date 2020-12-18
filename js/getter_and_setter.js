@@ -58,21 +58,23 @@ let koder = {
             ave: 90
         }
     ],
-    asistencias: [
-        {ispresent: false},
-        {ispresent: true},
-        {ispresent: false},
+    absences: [
+        {
+            date: '2020/12/15',
+            ispresent: false
+        },
+        {
+            date: '2020/12/16',
+            ispresent: true
+        },
+        {
+            date: '2020/12/17',
+            ispresent: false
+        },
     ],
-    get porcentajeFaltas() {
-        let asistencias = this.asistencias
-        // let accFaltas = 0
-        // for(falta in asistencias) {
-        //     if(asistencias[falta] === false) {
-        //         accFaltas += 1
-        //     }
-        // }
-        //return accFaltas
-        return asistencias.reduce( (acc, cv) => {
+    get porcentAbsences() {
+        let absences = this.absences
+        return absences.reduce( (acc, cv) => {
             if(cv.ispresent === false) {
                return acc + 1
             } else {
