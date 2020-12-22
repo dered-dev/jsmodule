@@ -9,7 +9,7 @@ const addElements = (selector,numberElements, arrNames) => {
             listKoders += `<li>Koder ${index + 1}: ${koder}</li>`
         }
     })
-    document.querySelector(''+selector).innerHTML = listKoders
+    document.querySelector(selector).innerHTML = listKoders
 }
 
 // Exercise filter
