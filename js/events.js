@@ -1,6 +1,6 @@
 
-const kodersArr = ['Ale', 'ale2', 'alejandra','oscar','ruben', 'brian']
-
+const kodersArr = ['Ale', 'ale2', 'alejandra','oscar','ruben', 'brian', 'brenda']
+console.log('Hola Koders event')
 // Exercise
 const addElements = (selector,numberElements, arrNames) => {
     let listKoders = ''
@@ -9,7 +9,7 @@ const addElements = (selector,numberElements, arrNames) => {
             listKoders += `<li>Koder ${index + 1}: ${koder}</li>`
         }
     })
-    document.querySelector(''+selector).innerHTML = listKoders
+    document.querySelector(selector).innerHTML = listKoders
 }
 
 // Exercise filter
