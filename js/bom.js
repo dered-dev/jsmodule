@@ -1,35 +1,3 @@
-
-let showAll = document.getElementById('showAll')
-showAll.addEventListener("click", function(){
-    addElements('#listatest', 10, kodersArr)
-})
-
-let order__list = document.getElementById('order__list')
-order__list.addEventListener("change", function(){
-    filterAZ()
-})
-
-let aToZ = document.getElementById('orderletter')
-if(aToZ !== null) {
-    aToZ.addEventListener('change', function(){
-        filterAZ()
-    })
-}
-
-let busqueda = document.querySelector('.search')
-busqueda.addEventListener("keyup", function(){
-    // console.log(document.querySelector('.search').value)
-    // buscaba
-
-
-
-
-})
-
-// insertBefore
-// li
-// li
-// reemplazar
 // DOM
 // Document Object Model
 
@@ -99,24 +67,3 @@ const isLogged = () => {
 }
 window.addEventListener('load', isLogged)
 
-
-
-
-// HomeWork
-// 1.
-// si el usuario no tiene la cookie sessionuser
-// Redireccionarlo al /login.html
-// si tiene la cookie sessionuser
-// redireccionarlo a /user.html
-
-// 2. 
-// Crear un div con un mensaje de
-// "Este sitio se ve mejor en desktop"
-
-// si el viewportWidth es <= 767
-// aparecer el mensaje
-// sino
-// desaparecer el mensaje
-
-// utilizar css
-// no usar inline styles
