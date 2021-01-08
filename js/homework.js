@@ -14,22 +14,6 @@
 
 let selectOrder = document.getElementById('order__list')
 
-// const filterKodersSelect = () => {
-//     let order = document.getElementById('order__list').value
-//     let orderArray = kodersArr.sort()
-
-//     if(order === 'a'){
-//         addElements('#lista', orderArray.length , orderArray)
-//     } else if(order === 'd'){
-//         addElements('#lista', orderArray.length , orderArray.reverse())
-//     }
-// }
-
-// const filterKodersSelect = () => {
-//     let order = document.getElementById('order__list').value
-//     let orderArray = kodersArr.sort()
-//     addElements('#lista', orderArray.length , order === 'a' ? orderArray : orderArray.reverse())
-// }
 const filterKodersSelectAD = (arr) => {
     let order = document.getElementById('order__list').value
     let fakeArr = [...arr]
