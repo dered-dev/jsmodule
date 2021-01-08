@@ -4,24 +4,49 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hola mundo</title>
-        <link rel="stylesheet" href="">    
+        <link rel="stylesheet" href="css/style.css">    
     </head>
     <body>
-        <button onclick="addElements('#lista', 10, kodersArr)" >Todos</button>
-        <button onclick="filterKoders('a')" >A</button>
-        <button onclick="filterKoders('o')" >O</button>
-        <button onclick="filterKoders('r')" >R</button>
-        
-        <select name="" id="orden" >
-            <option value="" selected>Seleccionar</option>
+        <button id="showAll" >Todos</button>
+        <select name="" id="order__list">
+            <option value="" selected>Seleccionar a/d</option>
             <option value="a">Ascendente</option>
             <option value="d">Descendente</option>
         </select>
+        <!--
+            <select name="" id="orderletter">
+                <option value="" selected>Seleccionar a-z </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+            </select>
+        -->
 
-        <ul id="lista"></ul>
+        <input type="text" class="search" placeholder="Busca tu koder">
+
+
+        <ul id="lista">
+            
+        </ul>
+        <ul id="listatest">
+            <p>No existen koders con ese nombre</p>
+        </ul>
+        <div class="container__box">
+            <div class="box box_desktop" >
+                contenido solo desktop
+            </div>
+            <div class="box box_mobile">
+                contenido mobile
+            </div>
+        </div>
+        <p id="session"></p>
+        
+        <a href="" target="_self">Abrir el link</a>
+
 
         <script src="js/main.js" ></script>
         <script src="js/events.js"></script>
         <script src="js/homework.js"></script>
+        <script src="js/addeventlistener.js"></script>
     </body>
 </html>

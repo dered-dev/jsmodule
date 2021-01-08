@@ -1,6 +1,6 @@
 
-const kodersArr = ['Ale', 'ale2', 'alejandra','oscar','ruben', 'brian']
-
+const kodersArr = ['Ale', 'ale2', 'alejandra','oscar','ruben', 'brian', 'brenda']
+console.log('Hola Koders event')
 // Exercise
 const addElements = (selector,numberElements, arrNames) => {
     let listKoders = ''
