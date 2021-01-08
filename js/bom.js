@@ -65,5 +65,7 @@ const isLogged = () => {
         document.cookie = 'logged=true'
     }
 }
+
+
 window.addEventListener('load', isLogged)
 

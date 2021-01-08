@@ -16,3 +16,33 @@
 
 // utilizar css
 // no usar inline styles
+
+const checkSession = () => {
+    const cookieUser = document.cookie
+    if(cookieUser.includes('sessionuser=1234')){
+        if(window.location.pathname !== '/user.html'){
+            location.pathname = '/user.html'
+        }
+    } else {
+        document.cookie = 'sessionuser=1234'
+        location.pathname = '/login.html'
+    }
+}
+const checkResolution = () => {
+    let messageContainer = document.querySelector('.message__desktop')
+    if(window.innerWidth <= 767){
+        messageContainer.classList.add('open')
+    } else {
+        messageContainer.classList.remove('open')
+    }
+}
+
+
+window.addEventListener('load', function(){
+    checkSession()
+    checkResolution()
+})
+window.addEventListener('resize', function(){
+    checkResolution()
+})
+
