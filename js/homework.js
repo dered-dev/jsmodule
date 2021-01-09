@@ -28,6 +28,7 @@ const checkSession = () => {
         location.pathname = '/login.html'
     }
 }
+
 const checkResolution = () => {
     let messageContainer = document.querySelector('.message__desktop')
     if(window.innerWidth <= 767){
@@ -37,11 +38,11 @@ const checkResolution = () => {
     }
 }
 
-
 window.addEventListener('load', function(){
     checkSession()
     checkResolution()
 })
+
 window.addEventListener('resize', function(){
     checkResolution()
 })
