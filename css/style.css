@@ -24,6 +24,22 @@ body{
     -o-transform: rotate(10deg) translate(-200px);
     
 }
+.message__desktop{
+    display: none;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+}
+.message__desktop.open{
+    display: flex;
+}
 
 @media screen and (min-width: 768px) {
     .d-block{
