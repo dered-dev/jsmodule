@@ -41,6 +41,27 @@ body{
     display: flex;
 }
 
+/* list users */
+.item__user{
+    transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+    -moz-transition: all linear .25s;
+    -ms-transition: all linear .25s;
+    -o-transition: all linear .25s;
+}
+.item__user:hover{
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+.icon__user{
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+}
+
+.img__user__profile{
+    max-width:100px;
+}
+
 @media screen and (min-width: 768px) {
     .d-block{
         transform: rotate(0) translate(0);
