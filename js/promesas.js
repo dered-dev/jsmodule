@@ -1,29 +1,30 @@
-let x  = 10
+// console.log('dar click a pedir usuario')
+// setTimeout( ()=> {
+//     console.log('Pidiendo usuarios')
+// }, 2000)
+// console.log('Imprimir usuarios')
 
-console.log('1. Iniciando el proceso')
-setTimeout(()=> {
-    x = x * 2
-    console.log('2. Proceso terminado')
-})
-console.log('3. El resultado es', x)
-
-
-// Definición de promesa
-const promesa = new Promise( (resolve, reject) => {
-    setTimeout(()=> {
-        x = x * 2
-        console.log('2. Proceso terminado')
+let x = 12
+console.log('dar click a pedir usuario')
+new Promise( (resolve, reject) => {
+    if(x == 10) {
         resolve(x)
-    })
-})  
+    } else {
+        reject('El valor no es 10')
+    }
 
-console.log('1. Iniciando el proceso')
-promesa.then(response => {
-    console.log('3. El resultado es', response)
+    // setTimeout( () => {
+    //     x = x * 2
+    //     console.log('Pidiendo usuarios')
+    //     resolve(x)
+    // }, 2000)
+
+}).then( response  => {
+    console.log(response)
+}).catch(err => {
+    console.error(err)
 })
 
-
-// 
 let usuarios = [
     {
         id:1,
@@ -34,42 +35,29 @@ let usuarios = [
         nombre: 'Luis'
     }
 ]
-let telefonos = [
-    {
-        id:1,
-        nombre:'3131313131'
-    },
-    {
-        id:2,
-        nombre: '423424232'
-    }
-]
 
-
-const obtenerUsuario = id => {
-    return new Promise( (resolve, reject) => {
-        if(usuarios.find(usuario => usuario.id === id)) {
+const obtenerUsuario = (id) => {
+    let promesa = new Promise((resolve, reject) => {
+        if(usuarios.find( usuario => usuario.id ===  id)) {
             resolve('El usuario existe')
-        } else  {
+        } else {
             reject('El usuario no existe')
-        }
+        }   
     })
+    return promesa
 }
-
-const obtenerTelefono = id => {
-    return new Promise( (resolve, reject) => {
-        if(telefonos.find(telefono => telefono.id === id)) {
-            resolve('El telefono')
-        } else  {
-            reject('El telefono no existe')
-        }
-    })
-}
-
-obtenerUsuario()
+obtenerUsuario(1)
 .then(response => {
     console.log(response)
 })
-.catch(err=> {
-    console.error(err)
+.catch( err => {
+    console.log(err)
 })
+
+
+
+
+
+
+
+
