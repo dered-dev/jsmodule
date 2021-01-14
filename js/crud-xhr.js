@@ -100,12 +100,11 @@ const deleteUser  = (idUser) => {
 
 
 // function request all methods
-const requestAjax = (url, callback, method = 'GET', data = {}) => {
+const requestAjax = (url, funcionALlamar, method = 'GET', data = {}) => {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            console.log(JSON.parse(this.response))
-            callback(JSON.parse(this.response))
+            funcionALlamar(JSON.parse(this.response))
             return true
         } else if (this.readyState === 4 && this.status === 404) {
             console.error(JSON.parse(this.response))
@@ -162,6 +161,7 @@ const showUsers = (response) => {
                 </div> 
                 <div class="d-flex"> 
                     <a href="user.html?id=${user}" class="btn btn-link">Ver usuario</a> 
+                    <a href="update-user.html?id=${user}" class="btn btn-link">Editar usuario</a> 
                     <button class="btn btn-danger btn__delete__user" data-id="${user}" data-user="${user}" data-algo="${user}">Eliminar ${iconDelete}</button>    
                 </div> 
             </li>
@@ -170,6 +170,7 @@ const showUsers = (response) => {
     document.querySelector('.list__users').innerHTML = usersList
     deleteUserBtns()
 }
+// print user card
 const printUser = (arrData) => {
     if(arrData !== null) {
 
@@ -239,6 +240,9 @@ if(btn__send__form) {
         }
     })
 }
+
+// update user.html
+
 
 
 
