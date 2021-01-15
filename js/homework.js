@@ -5,5 +5,22 @@
  * de la lista de ciudades, filtrar solo las que coincidan con la busqueda
  */
 
+$('#busqueda').keyup(function(){
+    let term = $(this).val()
+    $('#ciudades li').hide()
 
+    let ciudades = $("#ciudades li")
+    for(item of ciudades) {
+        if (item.innerText.toLowerCase().search(term.toLowerCase()) !== -1) { 
+            $(item).show()
+        }
+    }
+
+    // $("#ciudades li").each((id, elem) => { 
+    //     if (elem.innerText.toLowerCase().search(term.toLowerCase()) !== -1) { 
+    //         $("#ciudades li").eq(id).show()
+    //     } 
+    // }); 
+
+})
 
